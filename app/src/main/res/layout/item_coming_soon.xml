@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/comingSoonImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backdrop_placeholder" />
+
+    <TextView
+        android:id="@+id/comingSoonDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Coming December 2023"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/comingSoonTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Movie Title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comingSoonGenres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Action, Adventure, Sci-Fi"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/comingSoonDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Movie description goes here. This is a placeholder for the movie description."
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/remindMeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/medium_gray"
+
+        android:paddingHorizontal="16dp"
+        android:text="Remind Me"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+<!--    android:drawableStart="@drawable/ic_notification"-->
+</LinearLayout>

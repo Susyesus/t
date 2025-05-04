@@ -1,0 +1,233 @@
+package cit.app.test
+
+import android.content.Intent
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
+class GenreFragment : Fragment() {
+
+    private lateinit var genreRecyclerView: RecyclerView
+    private lateinit var backButton: ImageButton
+    private lateinit var genreTitleText: TextView
+    private var genreName: String = ""
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            genreName = it.getString(ARG_GENRE_NAME, "")
+        }
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_genre, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Initialize views
+        genreRecyclerView = view.findViewById(R.id.genreRecyclerView)
+        backButton = view.findViewById(R.id.backButton)
+        genreTitleText = view.findViewById(R.id.genreTitleText)
+
+        // Set genre title
+        genreTitleText.text = genreName
+
+        // Set up back button
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
+        // Set up RecyclerView
+        genreRecyclerView.layoutManager = GridLayoutManager(context, 3)
+
+        // Get movies for this genre
+        val movies = getMoviesByGenre(genreName)
+        val movieAdapter = MovieAdapter(movies)
+        genreRecyclerView.adapter = movieAdapter
+
+        // Set item click listener
+        movieAdapter.setOnItemClickListener { movie ->
+            val intent = Intent(activity, MovieDetailsActivity::class.java)
+            intent.putExtra("title", movie.title)
+            intent.putExtra("imageUrl", movie.imageUrl)
+            intent.putExtra("rating", movie.rating)
+            intent.putExtra("description", movie.description)
+            intent.putExtra("year", movie.year)
+            intent.putExtra("duration", movie.duration)
+            startActivity(intent)
+        }
+    }
+
+    private fun getMoviesByGenre(genre: String): List<Movie> {
+        // Get all movies
+        val allMovies = getAllMovies()
+
+        // Filter by genre
+        return allMovies.filter { movie ->
+            movie.genres.contains(genre)
+        }
+    }
+
+    private fun getAllMovies(): List<Movie> {
+        return listOf(
+            Movie(
+                "Stranger Things",
+                "https://placeholder.com/300x450",
+                "TV-14",
+                "A group of kids face supernatural forces in the small town of Hawkins.",
+                "2016",
+                "50m",
+                listOf("Sci-Fi", "Horror", "Drama")
+            ),
+            Movie(
+                "The Witcher",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world.",
+                "2019",
+                "1h",
+                listOf("Fantasy", "Action", "Adventure")
+            ),
+            Movie(
+                "Money Heist",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "A criminal mastermind who goes by The Professor has a plan to pull off the biggest heist in history.",
+                "2017",
+                "50m",
+                listOf("Crime", "Drama", "Thriller")
+            ),
+            Movie(
+                "Dark",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "A family saga with a supernatural twist, set in a German town where the disappearance of two children exposes the relationships among four families.",
+                "2017",
+                "1h",
+                listOf("Sci-Fi", "Thriller", "Mystery")
+            ),
+            Movie(
+                "The Crown",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.",
+                "2016",
+                "1h",
+                listOf("Drama", "History", "Biography")
+            ),
+            Movie(
+                "Squid Game",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "Hundreds of cash-strapped players accept a strange invitation to compete in children's games.",
+                "2021",
+                "1h",
+                listOf("Thriller", "Drama", "Action")
+            ),
+            Movie(
+                "Bridgerton",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "Wealth, lust, and betrayal set against the backdrop of Regency-era England.",
+                "2020",
+                "1h",
+                listOf("Drama", "Romance", "History")
+            ),
+            Movie(
+                "Lupin",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+                "2021",
+                "45m",
+                listOf("Crime", "Mystery", "Action")
+            ),
+            Movie(
+                "The Queen's Gambit",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA.",
+                "2020",
+                "1h",
+                listOf("Drama", "Sport")
+            ),
+            Movie(
+                "Cobra Kai",
+                "https://placeholder.com/300x450",
+                "TV-14",
+                "Decades after their 1984 All Valley Karate Tournament bout, a middle-aged Daniel LaRusso and Johnny Lawrence find themselves martial-arts rivals again.",
+                "2018",
+                "30m",
+                listOf("Action", "Comedy", "Drama")
+            ),
+            Movie(
+                "Breaking Bad",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+                "2008",
+                "49m",
+                listOf("Crime", "Drama", "Thriller")
+            ),
+            Movie(
+                "Peaky Blinders",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps.",
+                "2013",
+                "1h",
+                listOf("Crime", "Drama")
+            ),
+            Movie(
+                "Narcos",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar.",
+                "2015",
+                "50m",
+                listOf("Crime", "Drama", "Biography")
+            ),
+            Movie(
+                "Black Mirror",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.",
+                "2011",
+                "1h",
+                listOf("Sci-Fi", "Drama", "Thriller")
+            ),
+            Movie(
+                "The Last Kingdom",
+                "https://placeholder.com/300x450",
+                "TV-MA",
+                "As Alfred the Great defends his kingdom from Norse invaders, Uhtred - born a Saxon but raised by Vikings - seeks to claim his ancestral birthright.",
+                "2015",
+                "1h",
+                listOf("Action", "Drama", "History")
+            )
+        )
+    }
+
+    companion object {
+        private const val ARG_GENRE_NAME = "genre_name"
+
+        fun newInstance(genreName: String): GenreFragment {
+            val fragment = GenreFragment()
+            val args = Bundle()
+            args.putString(ARG_GENRE_NAME, genreName)
+            fragment.arguments = args
+            return fragment
+        }
+    }
+}
