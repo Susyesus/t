@@ -3,10 +3,7 @@ package cit.app.test
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 class LoginActivity : Activity() {
 
@@ -20,30 +17,24 @@ class LoginActivity : Activity() {
         val signupText = findViewById<TextView>(R.id.signupText)
 
         loginButton.setOnClickListener {
-            // Validate login credentials
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-                // In a real app, you would validate against a backend
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+                if (UserRepository.validateUser(email, password)) {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
+                } else {
+                    Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                // Show error
-                if (email.isEmpty()) {
-                    emailEditText.error = "Email is required"
-                }
-                if (password.isEmpty()) {
-                    passwordEditText.error = "Password is required"
-                }
+                if (email.isEmpty()) emailEditText.error = "Email is required"
+                if (password.isEmpty()) passwordEditText.error = "Password is required"
             }
         }
 
         signupText.setOnClickListener {
-            // Navigate to signup screen
-            val intent = Intent(this, SignupActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, SignupActivity::class.java))
         }
     }
 }
