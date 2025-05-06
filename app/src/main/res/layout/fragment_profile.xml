@@ -87,7 +87,7 @@
         android:id="@+id/settingsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/medium_gray"
+        android:backgroundTint="@color/light_gray"
         android:text="Settings"
         android:textAllCaps="false"
         android:textColor="@color/white" />
@@ -100,5 +100,6 @@
         android:backgroundTint="@color/red"
         android:text="Log Out"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:background="@drawable/edit_text_background"/>
 </LinearLayout>
