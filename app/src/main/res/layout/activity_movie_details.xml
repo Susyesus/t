@@ -116,7 +116,6 @@
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:backgroundTint="#3A3A3A"
-                    android:drawableStart="@drawable/ic_download"
                     android:text="Download"
                     android:textColor="@color/white" />
             </LinearLayout>
