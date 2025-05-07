@@ -35,11 +35,12 @@ class SignupActivity : Activity() {
                 return@setOnClickListener
             }
 
-            val passwordRegex = Regex("^[A-Z][0-9]{11}[a-z][^a-zA-Z0-9]$")
-            if (!password.matches(passwordRegex)) {
+            val passwordRegex = Regex("^[A-Z][0-9]{2}[a-z][^a-zA-Z0-9]$")
+            //!password.matches(passwordRegex)
+            if (password.length < 6) {
                 Toast.makeText(
                     this,
-                    "Password format must be: 1 uppercase, 11 digits, 1 lowercase, and 1 special character (e.g., K09166588046e.)",
+                    "Password format must be: 1 uppercase, 2 digits, 1 lowercase, and 1 special character (e.g., K09166588046e.)",
                     Toast.LENGTH_LONG
                 ).show()
                 return@setOnClickListener
