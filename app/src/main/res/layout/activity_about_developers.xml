@@ -45,7 +45,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/teknoyflix_logo" />
+                android:src="@drawable/teknoy_play" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -73,11 +73,12 @@
                 android:layout_marginTop="32dp"
                 android:background="@color/red" />
 
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="Lead Developer"
+                android:layout_marginTop="24dp"
+                android:text="Iesus Rey Ano-os"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -86,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="John Smith"
+                android:text="Fun fact: miss ko pa rin siya"
                 android:textColor="@color/light_gray"
                 android:textSize="16sp" />
 
@@ -94,7 +95,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="john.smith@teknoyflix.com"
+                android:text="Skills: JavaScript, React Native, Web Development"
                 android:textColor="@color/light_gray"
                 android:textSize="14sp" />
 
@@ -102,7 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="UI/UX Designer"
+                android:text="Ken Ferry Apor"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -111,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Jane Doe"
+                android:text="Fun fact:  Enjoys playing video games in free time!"
                 android:textColor="@color/light_gray"
                 android:textSize="16sp" />
 
@@ -119,32 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="jane.doe@teknoyflix.com"
-                android:textColor="@color/light_gray"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Backend Developer"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Mike Johnson"
-                android:textColor="@color/light_gray"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="mike.johnson@teknoyflix.com"
+                android:text="Skills: JavaScript, React Native, Web Development"
                 android:textColor="@color/light_gray"
                 android:textSize="14sp" />
 
@@ -166,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Teknoyflix is a streaming platform that brings you the best movies and TV shows. This app was developed as a demonstration of Android development skills using Kotlin and XML."
+                android:text="Teknoyflix is a streaming platform that brings you the best movies and TV shows. This app was developed as a final requirement for the subject Mobile Development Platform under the guidance of Mr. Joemarie Amparo as a test of our skills using Kotlin and XML."
                 android:textColor="@color/light_gray"
                 android:textSize="16sp" />
 
