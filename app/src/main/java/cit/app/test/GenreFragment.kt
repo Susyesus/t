@@ -83,7 +83,7 @@ class GenreFragment : Fragment() {
         return listOf(
             Movie(
                 "Stranger Things",
-                "https://placeholder.com/300x450",
+                "https://m.media-amazon.com/images/M/MV5BMjg2NmM0MTEtYWY2Yy00NmFlLTllNTMtMjVkZjEwMGVlNzdjXkEyXkFqcGc@._V1_.jpg",
                 "TV-14",
                 "A group of kids face supernatural forces in the small town of Hawkins.",
                 "2016",
@@ -92,7 +92,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "The Witcher",
-                "https://placeholder.com/300x450",
+                "https://static.wikia.nocookie.net/witcher/images/a/a4/Netflix_poster_s1.jpg/revision/latest/scale-to-width-down/1200?cb=20191120213257",
                 "TV-MA",
                 "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world.",
                 "2019",
@@ -101,7 +101,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Money Heist",
-                "https://placeholder.com/300x450",
+                "https://static.wikia.nocookie.net/netflix/images/0/0e/MH_S5_Promotional.jpg/revision/latest/scale-to-width-down/1200?cb=20210904021400",
                 "TV-MA",
                 "A criminal mastermind who goes by The Professor has a plan to pull off the biggest heist in history.",
                 "2017",
@@ -110,7 +110,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Dark",
-                "https://placeholder.com/300x450",
+                "https://upload.wikimedia.org/wikipedia/en/d/da/DarkNetflixPosterEnglish.jpg",
                 "TV-MA",
                 "A family saga with a supernatural twist, set in a German town where the disappearance of two children exposes the relationships among four families.",
                 "2017",
@@ -119,7 +119,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "The Crown",
-                "https://placeholder.com/300x450",
+                "https://resizing.flixster.com/aX9Yz5sNV2WpBA5CoENzIl9RbTM=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vUlRUVjI2NTU1OS53ZWJw",
                 "TV-MA",
                 "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.",
                 "2016",
@@ -128,7 +128,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Squid Game",
-                "https://placeholder.com/300x450",
+                "https://asianwiki.com/images/0/0e/Squid_Game-p2.jpg",
                 "TV-MA",
                 "Hundreds of cash-strapped players accept a strange invitation to compete in children's games.",
                 "2021",
@@ -137,7 +137,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Bridgerton",
-                "https://placeholder.com/300x450",
+                "https://m.media-amazon.com/images/M/MV5BZmRjNDNlMDMtNDZlMS00NzE4LTk0OGMtYjQyMWY3YWFmY2I5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 "TV-MA",
                 "Wealth, lust, and betrayal set against the backdrop of Regency-era England.",
                 "2020",
@@ -146,7 +146,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Lupin",
-                "https://placeholder.com/300x450",
+                "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p19204904_b_v13_al.jpg",
                 "TV-MA",
                 "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
                 "2021",
@@ -155,7 +155,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "The Queen's Gambit",
-                "https://placeholder.com/300x450",
+                "https://upload.wikimedia.org/wikipedia/en/1/12/The_Queen%27s_Gambit_%28miniseries%29.png",
                 "TV-MA",
                 "Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA.",
                 "2020",
@@ -164,7 +164,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Cobra Kai",
-                "https://placeholder.com/300x450",
+                "https://static.wikia.nocookie.net/netflix/images/a/a3/Cobra_Kai_S4_Poster.jpg/revision/latest?cb=20220413111556",
                 "TV-14",
                 "Decades after their 1984 All Valley Karate Tournament bout, a middle-aged Daniel LaRusso and Johnny Lawrence find themselves martial-arts rivals again.",
                 "2018",
@@ -173,7 +173,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Breaking Bad",
-                "https://placeholder.com/300x450",
+                "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
                 "TV-MA",
                 "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
                 "2008",
@@ -182,7 +182,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Peaky Blinders",
-                "https://placeholder.com/300x450",
+                "https://m.media-amazon.com/images/M/MV5BOGM0NGY3ZmItOGE2ZC00OWIxLTk0N2EtZWY4Yzg3ZDlhNGI3XkEyXkFqcGc@._V1_.jpg",
                 "TV-MA",
                 "A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps.",
                 "2013",
@@ -191,7 +191,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Narcos",
-                "https://placeholder.com/300x450",
+                "https://m.media-amazon.com/images/M/MV5BNzQwOTcwMzIwN15BMl5BanBnXkFtZTgwMjYxMTA0NjE@._V1_.jpg",
                 "TV-MA",
                 "A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar.",
                 "2015",
@@ -200,7 +200,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "Black Mirror",
-                "https://placeholder.com/300x450",
+                "https://static.wikia.nocookie.net/best-tv-shows/images/6/66/Black_Mirror.jpg/revision/latest?cb=20220528102419",
                 "TV-MA",
                 "An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.",
                 "2011",
@@ -209,7 +209,7 @@ class GenreFragment : Fragment() {
             ),
             Movie(
                 "The Last Kingdom",
-                "https://placeholder.com/300x450",
+                "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p12079367_b_v8_an.jpg",
                 "TV-MA",
                 "As Alfred the Great defends his kingdom from Norse invaders, Uhtred - born a Saxon but raised by Vikings - seeks to claim his ancestral birthright.",
                 "2015",

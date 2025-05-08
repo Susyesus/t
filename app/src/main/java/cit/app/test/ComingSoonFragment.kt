@@ -32,21 +32,21 @@ class ComingSoonFragment : Fragment() {
         return listOf(
             ComingSoon(
                 "Stranger Things Season 5",
-                "https://placeholder.com/800x450",
+                "https://upload.wikimedia.org/wikipedia/commons/7/73/Stranger_Things_5_title_card.webp",
                 "Coming December 2023",
                 "The epic conclusion to the Stranger Things saga. The kids of Hawkins face their greatest challenge yet as they confront the ultimate evil from the Upside Down.",
                 "Sci-Fi, Horror, Drama"
             ),
             ComingSoon(
                 "The Witcher Season 3",
-                "https://placeholder.com/800x450",
+                "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/10/Nteflix-Witcherverse-art.jpg",
                 "Coming October 2023",
                 "Geralt of Rivia continues his journey protecting Princess Cirilla while navigating the increasingly dangerous Continent.",
                 "Fantasy, Action, Adventure"
             ),
             ComingSoon(
                 "Squid Game Season 2",
-                "https://placeholder.com/800x450",
+                "https://i.ytimg.com/vi/OsIohljR4WY/maxresdefault.jpg",
                 "Coming January 2024",
                 "The games continue with new players, higher stakes, and deadlier challenges.",
                 "Thriller, Drama, Action"

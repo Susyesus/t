@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.annotation.OptIn
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
+import androidx.media3.common.util.UnstableApi
 import androidx.media3.common.util.Util
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
@@ -96,6 +98,7 @@ class VideoPlayerActivity : Activity() {
                 or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
     }
 
+    @OptIn(UnstableApi::class)
     override fun onStart() {
         super.onStart()
         if (Util.SDK_INT >= 24) {
@@ -103,6 +106,7 @@ class VideoPlayerActivity : Activity() {
         }
     }
 
+    @OptIn(UnstableApi::class)
     override fun onResume() {
         super.onResume()
         hideSystemUi()
@@ -111,6 +115,7 @@ class VideoPlayerActivity : Activity() {
         }
     }
 
+    @OptIn(UnstableApi::class)
     override fun onPause() {
         super.onPause()
         if (Util.SDK_INT < 24) {
@@ -118,6 +123,7 @@ class VideoPlayerActivity : Activity() {
         }
     }
 
+    @OptIn(UnstableApi::class)
     override fun onStop() {
         super.onStop()
         if (Util.SDK_INT >= 24) {
